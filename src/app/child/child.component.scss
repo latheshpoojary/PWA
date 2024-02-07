@@ -1,0 +1,21 @@
+.child-container{
+	padding: 2rem;
+	background-color: aquamarine;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	.card{
+		padding: 1rem;
+		background-color: antiquewhite;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		.user{
+			span{
+				padding: .5rem;
+				text-align: center;
+				background-color: aqua;
+			}
+		}
+	}
+}
