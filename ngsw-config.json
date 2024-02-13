@@ -29,8 +29,8 @@
   ],
   "dataGroups": [
     {
-      "name": "json-api",
-      "urls": ["https://jsonplaceholder.typicode.com/posts"],
+      "name": "product-api",
+      "urls": ["https://fakestoreapi.com/products"],
       "cacheConfig": {
         "maxAge": "1h",
         "strategy": "freshness",
