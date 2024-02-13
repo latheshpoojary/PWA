@@ -1,13 +1,14 @@
-.container{
-	width: 100%;
+.app-container{
+	width: 100% !important;
 	height: 100vh;
+	margin: 0 !important;
 	.header{
 		width: 100%;
 		padding: 2rem;
 		background-color: #dcdcdc;
 		text-align: center;
 		h1{
-			font-size: 70px;
+			// font-size: 70px;
       font-weight: 600;
 			background-image: url(../assets/images/text_background.jpg);
 			background-repeat: no-repeat;
@@ -18,5 +19,8 @@
 			color: transparent;
 
 		}
+	}
+	.routers{
+		width: 100%;
 	}
 }
