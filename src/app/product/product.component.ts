@@ -40,7 +40,15 @@ export class ProductComponent {
     })
   }
 
-  onCategoryChange(value:string) {
+  onCategoryChange(value: string) {
+    if (value === '') {
+      return 
+    }
+    else if (value === 'all') {
+      this.service.getAllProductDetails().subscribe((res:any) => {
+        this.products = res;
+      })
+    }
     this.service.getCategoryByName(value).subscribe({
       next: (res: any) => {
         this.products = res;

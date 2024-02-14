@@ -5,30 +5,34 @@
 		<span>Filter By:</span>
     <select class="form-control shadow-none" id="exampleFormControlSelect1" #categoryElement  (change)="onCategoryChange(categoryElement.value)">
       <option value="">select category</option>
+			<option value="all">All</option>
 			<option value="{{category}}" *ngFor="let category of catergories">{{category}}
 			</option>
     </select>
   </div>
-	<div class="card-wrapper">
-		<div class="card" *ngFor="let product of products" [routerLink]="['/product-details',product.id,product.category]">
-			<div class="image">
-				<img src="{{product.image}}" alt="">
-			</div>
-			<div class="product-details">
-				<h2>{{product.title}}</h2>
-				<p>{{product.description}}</p>
-				<div class="amount">
-					<span>{{product.price | currency}}</span>
+	<div class="card-container">
+		<div class="card-wrapper"  *ngFor="let product of products; index as i" [style.--delay]="i">
+			
+			<div class="card " [routerLink]="['/product-details',product.id,product.category]">
+				<div class="image">
+					<img src="{{product.image}}" alt="">
 				</div>
-				<div class="rating">
-					<ngb-rating class="custom-rating" [max]="5" [rate]="product.rating.rate" [disabled]="true"	></ngb-rating>
-	
+				<div class="product-details">
+					<h2>{{product.title}}</h2>
+					<p>{{product.description}}</p>
+					<div class="amount">
+						<span>{{product.price | currency}}</span>
+					</div>
+					<div class="rating">
+						<ngb-rating class="custom-rating" [max]="5" [rate]="product.rating.rate" [disabled]="true"	></ngb-rating>
+					</div>
 				</div>
-	
 			</div>
-			<div class="footer">
+			<div class="footer bg-yellow-400 text-center py-2">
 				<h3 class="mb-0">Add to cart</h3>
 			</div>
 		</div>
+		
+		
 	</div>
 	
