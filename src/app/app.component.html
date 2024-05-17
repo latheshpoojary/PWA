@@ -1,7 +1,26 @@
 <div class="app-container">
-  <div class="header">
-    <h1 class="text-uppercase">Shop Hurray</h1>
-  </div>
+  <header class="flex justify-between items-center">
+    <div class="header flex items-center">
+      <img src="../assets/images/logo.svg" alt="">
+    </div>
+    <nav class="pe-5">
+      <ul class="flex justify-around gap-3 ">
+        <li class="font-extrabold text-lg">
+          <a href="" class="no-underline text-orange-500">Home</a>
+        </li>
+        <li class="font-extrabold text-lg">
+          <a href=""  class="no-underline text-orange-500">Contact Us</a>
+        </li>
+        <li class="font-extrabold text-lg">
+          <a href="" class="no-underline text-orange-500">About Us</a>
+        </li>
+        <li class="font-extrabold text-lg">
+          <a href="" class="no-underline text-orange-500">Fake API</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
   <div class="routers">
     <router-outlet></router-outlet>
 

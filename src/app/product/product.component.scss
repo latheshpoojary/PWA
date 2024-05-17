@@ -1,7 +1,6 @@
 .child-container {
   padding: 2rem;
-  background-color: #f5f5f5;
-  
+  background-color: #d4d0d0;
   .filter{
     width: 200px;
     margin-left: auto;
@@ -46,6 +45,10 @@
       width: 70%;
       padding: 1rem;
       align-self: center;
+      transition: all .5s ease;
+      &:hover{
+        transform: scale(1.1);
+      }
       img {
         width: 100%;
         margin: auto;
@@ -85,12 +88,7 @@
 				}
 			}
     }
-		.footer{
-			width: 100%;
-			background-color: #ffca2a;
-			text-align: center;
-			padding: .3rem;
-		}
+		
   }
 }
 
